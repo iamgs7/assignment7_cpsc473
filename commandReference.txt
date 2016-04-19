@@ -1,0 +1,24 @@
+===========POST===============
+curl --silent --request POST \
+     --header 'Content-Type: application/json' \
+       --data '{ "title": "Node.js", "link": "https://nodejs.org/en/"  }' \
+       'http://localhost:3000/links' | python -m json.tool
+
+
+curl --silent --request POST \
+     --header 'Content-Type: application/json' \
+       --data '{ "title": "CPSC 473", "link": "https://sites.google.com/site/cpsc473"  }' \
+       'http://localhost:3000/links' | python -m json.tool
+
+
+===========GET=================
+curl --silent --request GET \
+     --header 'Content-Type: application/json' \
+     'http://localhost:3000/links' | python -m json.tool
+
+
+
+==========UPDATE CLICKS===============
+curl --silent --request GET \
+     --header 'Content-Type: application/json' \
+     'http://localhost:3000/click/Node.js' | python -m json.tool
